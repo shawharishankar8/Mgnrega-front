@@ -12,7 +12,7 @@ export default function DistrictSelector({ onSelect }) {
     setLoading(true);
     setError(null);
     
-    axios.get("http://localhost:8080/api/mgnrega/districts")
+    axios.get("https://mgnrega-back.onrender.com/api/mgnrega/districts")
       .then(res => {
         if (res.data && Array.isArray(res.data) && res.data.length > 0) {
           setDistricts(res.data);
