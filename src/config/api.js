@@ -1,5 +1,4 @@
-// src/config/api.js
-export const API_BASE_URL = 'http://localhost:8080/api/mgnrega';
+export const API_BASE_URL = 'https://mgnrega-back.onrender.com/api/mgnrega';
 
 export const API_ENDPOINTS = {
   DISTRICTS: `${API_BASE_URL}/districts`,
