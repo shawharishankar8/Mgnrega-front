@@ -15,7 +15,7 @@ export default function DistrictStats({ district }) {
       setLoading(true);
       setError(null);
       
-      axios.get(`http://localhost:8080/api/mgnrega/district/${district}`)
+      axios.get(`https://mgnrega-back.onrender.com/api/mgnrega/district/${district}`)
         .then(res => {
           if (res.data && Array.isArray(res.data)) {
             // Transform backend data to match frontend format
