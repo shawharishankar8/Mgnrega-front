@@ -66,6 +66,7 @@ export default function DistrictStats({ district }) {
   const totalHouseholds = data.reduce((sum, item) => sum + (item.householdsWorked || 0), 0);
   const totalPersondays = data.reduce((sum, item) => sum + (item.persondaysGenerated || 0), 0);
   const totalExpenditure = totalPersondays * averageWage; // Use real average wage
+  // eslint-disable-next-line no-unused-vars
   const performanceScore = Math.min(100, Math.floor((totalPersondays / Math.max(totalHouseholds, 1) / 30) * 100));
 
   if (!district) {
